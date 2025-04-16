@@ -619,7 +619,16 @@ section {
 .projects .box-container .box:hover .image img {
     transform: scale(1.08);
 }
+.download-btn {
+    background: var(--yellow);
+    color: var(--black);
+    margin-right: 1rem;
+}
 
+.download-btn:hover {
+    background: var(--black);
+    color: var(--white);
+}
 .projects .box-container .box .content {
     padding: 2.5rem;
 }
