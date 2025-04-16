@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black OAKS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <!-- header section starts -->
+<header class="header" aria-label="Main Navigation">
+    <a href="#" class="logo"><img src="images/logo.png" alt="Black OAKS Group Logo"></a>
+
+    <nav class="navbar" aria-label="Primary Navigation">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#projects">projects</a>
+        <a href="#amenities">amenities</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-search" id="search-btn" aria-label="Open Search" role="button" tabindex="0"></div>
+        <div class="fas fa-user" id="login-btn" aria-label="Open Login Form" role="button" tabindex="0"></div>
+        <div class="fas fa-bars" id="menu-btn" aria-label="Toggle Menu" role="button" tabindex="0"></div>
+    </div>
+
+    <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." aria-label="Search">
+        <label for="search-box" class="fas fa-search"></label>
+    </div>
+
+    <form class="login-form">
+        <h3>login now</h3>
+        <input type="email" placeholder="your email" class="box" aria-label="Email">
+        <input type="password" placeholder="your password" class="box" aria-label="Password">
+        <div class="flex">
+            <input type="checkbox" id="remember" aria-label="Remember Me">
+            <label for="remember">remember me</label>
+            <a href="#">forgot password?</a>
+        </div>
+        <input type="submit" value="login now" class="btn">
+        <p>don't have an account? <a href="#">create one</a></p>
+    </form>
+
+    <div class="contact-info">
+        <div id="close-contact-info" class="fas fa-times" aria-label="Close Contact Info" role="button" tabindex="0"></div>
+        <div class="info">
+            <i class="fas fa-phone"></i>
+            <h3>phone number</h3>
+            <p>+123-456-7890</p>
+        </div>
+        <div class="info">
+            <i class="fas fa-envelope"></i>
+            <h3>email address</h3>
+            <p>example@example.com</p>
+        </div>
+        <div class="info">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>office address</h3>
+            <p>Khyber Pakhtunkhwa, Pakistan</p>
+        </div>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f" aria-label="Facebook"></a>
+            <a href="#" class="fab fa-twitter" aria-label="Twitter"></a>
+            <a href="#" class="fab fa-instagram" aria-label="Instagram"></a>
+            <a href="#" class="fab fa-linkedin" aria-label="LinkedIn"></a>
+        </div>
+    </div>
+</header>
+<!-- header section ends -->
+
+    <!-- home section starts -->
+<section class="home" id="home" aria-label="Home Section">
+    <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slider" style="background: url(images/home-bg-01.jpg) no-repeat;" role="img" aria-label="Discover Black OAKS">
+                <div class="content">
+                    <h3 class="animate-text">Discover Black OAKS</h3>
+                    <p class="animate-text">Your trusted partner for premium real estate in Khyber Pakhtunkhwa, delivering quality and value.</p>
+                    <a href="#about" class="btn animate-btn">Learn More</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slider" style="background: url(images/home-bg-02.jpg) no-repeat;" role="img" aria-label="Dream Homes Await">
+                <div class="content">
+                    <h3 class="animate-text">Dream Homes Await</h3>
+                    <p class="animate-text">Innovative, sustainable, and affordable housing solutions tailored to your lifestyle.</p>
+                    <a href="#projects" class="btn animate-btn">Explore Projects</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slider" style="background: url(images/home-bg-03.jpg) no-repeat;" role="img" aria-label="University Town Chakdara">
+                <div class="content">
+                    <h3 class="animate-text">University Town Chakdara</h3>
+                    <p class="animate-text">Experience modern living with nature and affordability in our flagship community.</p>
+                    <a href="#contact" class="btn animate-btn">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next" aria-label="Next Slide"></div>
+        <div class="swiper-button-prev" aria-label="Previous Slide"></div>
+        <div class="swiper-pagination" aria-label="Slide Pagination"></div>
+    </div>
+</section>
+<!-- home section ends -->
+
+    <!-- about section starts -->
+<section class="about" id="about" aria-label="About Us Section">
+    <h1 class="heading">about us</h1>
+
+    <div class="row">
+        <div class="image">
+            <img src="images/about-img.png" alt="Black OAKS Team working on real estate projects">
+        </div>
+
+        <div class="content">
+            <h3 class="animate-text">Building Your Future in Khyber Pakhtunkhwa</h3>
+            <p class="animate-text"><b>Black OAKS Group of Companies</b> is a dynamic and forward-thinking real estate developer based in Mardan, KP. We specialize in planning and building premium residential communities designed for modern living.
+
+                Founded by <b>Mr. Shakir Ullah</b>, our mission is to develop housing projects that are affordable, secure, and sustainable—while also offering excellent long-term value for investors and homeowners alike.</p>
+            <a href="#contact" class="btn animate-btn">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="box-container">
+        <div class="box">
+            <i class="fas fa-home"></i>
+            <h3>15+</h3>
+            <p>Years of Experience</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-building"></i>
+            <h3>500+</h3>
+            <p>Properties Sold</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-users"></i>
+            <h3>10K+</h3>
+            <p>Community Members</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-award"></i>
+            <h3>25+</h3>
+            <p>Awards Won</p>
+        </div>
+    </div>
+</section>
+<!-- about section ends -->
+
+<!-- projects section starts -->
+<section class="projects" id="projects" aria-label="Our Projects Section">
+    <h1 class="heading">our projects</h1>
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="images/university-town.png" alt="University Town Chakdara">
+            </div>
+            <div class="content">
+                <h3>University Town Chakdara</h3>
+                <h4>A Lifestyle, Not Just a Location</h4>
+                <p>University Town Chakdara is a thoughtfully designed, secure, and sustainable residential project that blends modern living with nature. Strategically located in Chakdara, it offers affordable plots with complete infrastructure and serene surroundings.</p>
+                <div class="features">
+                    <h5>Eco-Friendly Living:</h5>
+                    <ul>
+                        <li>Lush Green Spaces</li>
+                        <li>Filtered Water System</li>
+                        <li>Clean Air Environment</li>
+                    </ul>
+                </div>
+                <div class="payment">
+                    <h5>Payment Plan:</h5>
+                    <ul>
+                        <li>15% Booking | 1.5-Year Installments</li>
+                        <li>10% Discount on Full Payment</li>
+                        <li>Extra 10% for Corner, Park-Facing & Main Road Plots</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="btn">Inquire Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="images/university-villas.png" alt="University Villas">
+            </div>
+            <div class="content">
+                <h3>University Villas</h3>
+                <h4>Modern Living Meets Urban Comfort</h4>
+                <p>University Villas is the second premium project by Black OAKS, offering stylish, well-planned villas that redefine residential standards. Designed for families who value comfort, design, and easy access to daily essentials.</p>
+                <div class="features">
+                    <h5>Key Features:</h5>
+                    <ul>
+                        <li>Elegant Architecture & Modern Layouts</li>
+                        <li>Secure, Gated Environment</li>
+                        <li>Proximity to Schools, Clinics, and Markets</li>
+                        <li>Developed Roads, Sewerage & Street Lights</li>
+                        <li>Peaceful Residential Atmosphere</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="btn">Inquire Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- projects section ends -->
+
+<!-- amenities section starts -->
+<section class="amenities" id="amenities" aria-label="Amenities Section">
+    <h1 class="heading">amenities</h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="images/park.jpg" alt="Parks & Playgrounds">
+            <h3>Parks & Playgrounds</h3>
+            <p>Family-friendly spaces for leisure and health.</p>
+        </div>
+        <div class="box">
+            <img src="images/mosque.jpg" alt="Mosque">
+            <h3>Mosque</h3>
+            <p>A peaceful place of worship easily accessible to all blocks.</p>
+        </div>
+        <div class="box">
+            <img src="images/clinic.jpg" alt="Clinic">
+            <h3>Clinic</h3>
+            <p>24/7 primary healthcare for residents.</p>
+        </div>
+        <div class="box">
+            <img src="images/school.jpg" alt="School">
+            <h3>School</h3>
+            <p>Quality education for the next generation.</p>
+        </div>
+        <div class="box">
+            <img src="images/market.jpg" alt="Market">
+            <h3>Market</h3>
+            <p>Daily essentials just steps away.</p>
+        </div>
+        <div class="box">
+            <img src="images/street lights.jpg" alt="Solar-Powered Street Lights">
+            <h3>Solar-Powered Street Lights</h3>
+            <p>Sustainability meets convenience.</p>
+        </div>
+        <div class="box">
+            <img src="images/Sewerage system.jpg" alt="Underground Services">
+            <h3>Underground Services</h3>
+            <p>Reliable power, sewerage & clean surroundings.</p>
+        </div>
+        <div class="box">
+            <img src="images/boundary.jpg" alt="24/7 Security">
+            <h3>24/7 Security</h3>
+            <p>Boundary walls, barbed wires, and CCTV surveillance.</p>
+        </div>
+    </div>
+</section>
+<!-- amenities section ends -->
+
+<!-- contact section starts -->
+<section class="contact" id="contact" aria-label="Contact Us Section">
+    <h1 class="heading">contact us</h1>
+
+    <div class="row">
+        <div class="info">
+            <h3>Get in Touch</h3>
+            <p>We're here to answer your questions and help you find your dream property. Reach out today!</p>
+            <div class="details">
+                <i class="fas fa-phone"></i>
+                <p>+92 313 2222411</p>
+            </div>
+            <div class="details">
+                <i class="fas fa-envelope"></i>
+                <p>info@theblackoaks.com</p>
+            </div>
+            <div class="details">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Black OAKS Office PRC Chowk, Opposite DC Office, Mardan</p>
+            </div>
+            <div class="map">
+                <img src="images/map.png" alt="Map of Black OAKS office location">
+            </div>
+            <div class="share">
+                <a href="https://www.facebook.com/profile.php?id=61573183413331" class="fab fa-facebook-f" aria-label="Facebook"></a>
+                <a href="https://www.instagram.com/blackoaks_official/?hl=en" class="fab fa-instagram" aria-label="Instagram"></a>
+                <a href="https://www.tiktok.com/@black.oaks.group" class="fab fa-tiktok" aria-label="Tiktok"></a>
+            </div>
+        </div>
+
+        <form id="contact-form">
+            <h3>Send Us a Message</h3>
+            <input type="text" name="name" placeholder="Your Name" class="box" aria-label="Name" required>
+            <input type="email" name="email" placeholder="Your Email" class="box" aria-label="Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone (optional)" class="box" aria-label="Phone">
+            <textarea name="message" placeholder="Your Message" class="box" rows="5" aria-label="Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </div>
+</section>
+<!-- contact section ends -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
