@@ -66,29 +66,39 @@ document.addEventListener('click', (e) => {
 });
 
 // Home Slider
-let swiper = new Swiper(".home-slider", {
-    loop: true,
-    grabCursor: true,
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    a11y: {
-        enabled: true,
-        prevSlideMessage: "Previous slide",
-        nextSlideMessage: "Next slide",
-        paginationBulletMessage: "Go to slide {{index}}",
-    },
-});
+try {
+    let swiper = new Swiper(".home-slider", {
+        loop: true,
+        grabCursor: true,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        speed: 800,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        a11y: {
+            enabled: true,
+            prevSlideMessage: "Previous slide",
+            nextSlideMessage: "Next slide",
+            paginationBulletMessage: "Go to slide {{index}}",
+        },
+    });
+    console.log("Swiper initialized successfully");
+} catch (error) {
+    console.error("Swiper initialization failed:", error);
+}
 
 // Contact Form Validation
 const contactForm = document.querySelector('#contact-form');
