@@ -131,6 +131,11 @@ section {
     100% { transform: scale(1); }
 }
 
+@keyframes whatsappBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-1rem); }
+}
+
 .header {
     position: sticky;
     top: 0;
@@ -1057,6 +1062,39 @@ section {
     padding: 1.2rem;
 }
 
+.whatsapp-float {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: var(--black);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    animation: whatsappBounce 2s ease infinite;
+}
+
+.whatsapp-float i {
+    font-size: 2.4rem;
+}
+
+.whatsapp-float:hover {
+    background: var(--yellow);
+    color: var(--black);
+    transform: scale(1.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .whatsapp-float {
+        animation: none;
+    }
+}
+
 /* Media Queries */
 @media (max-width: 1200px) {
     .header { padding: 1.5rem 5%; }
@@ -1134,12 +1172,7 @@ section {
     .home .content p { font-size: 1.8rem; margin: 1.5rem auto; }
     .home .content .btn { padding: 1.2rem 3.5rem; font-size: 1.8rem; }
     .home .swiper-button-next,
-    .home .swiper-button-prev {
-        top: 65%;
-        transform: translateY(-50%);
-        height: 5rem;
-        width: 5rem;
-    }
+    .home .swiper-button-prev { height: 5rem; width: 5rem; }
     .home .swiper-button-next::after,
     .home .swiper-button-prev::after { font-size: 2rem; }
     .home .swiper-button-prev { left: 1.5rem; }
@@ -1193,6 +1226,15 @@ section {
     .contact .row .info,
     .contact .row form { flex: 1 1 100%; }
     .contact .row .info .map img { height: 20rem; }
+    .whatsapp-float {
+        bottom: 2.5rem;
+        right: 2rem;
+        width: 4rem;
+        height: 4rem;
+    }
+    .whatsapp-float i {
+        font-size: 2.2rem;
+    }
 }
 
 @media (max-width: 450px) {
@@ -1210,12 +1252,7 @@ section {
     .home .content p { font-size: 1.6rem; margin: 1rem auto; }
     .home .content .btn { padding: 1rem 3rem; font-size: 1.6rem; }
     .home .swiper-button-next,
-    .home .swiper-button-prev {
-        top: 70%;
-        transform: translateY(-50%);
-        height: 4rem;
-        width: 4rem;
-    }
+    .home .swiper-button-prev { height: 4rem; width: 4rem; }
     .home .swiper-button-next::after,
     .home .swiper-button-prev::after { font-size: 1.8rem; }
     .home .swiper-button-prev { left: 1rem; }
@@ -1272,4 +1309,13 @@ section {
     .contact .row form h3 { font-size: 2.5rem; }
     .contact .row .info .map img { height: 15rem; }
     .contact .row form .box { font-size: 1.5rem; }
+    .whatsapp-float {
+        bottom: 2rem;
+        right: 1.5rem;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .whatsapp-float i {
+        font-size: 2rem;
+    }
 }

@@ -115,3 +115,12 @@ contactForm.addEventListener('submit', (e) => {
         alert('Please fill in all required fields.');
     }
 });
+
+// WhatsApp Icon Redirect
+const whatsappFloat = document.querySelector('.whatsapp-float');
+if (whatsappFloat) {
+    whatsappFloat.addEventListener('click', (e) => {
+        // Link already set in <a href>, but this allows future enhancements (e.g., analytics)
+        console.log('WhatsApp icon clicked');
+    });
+}
