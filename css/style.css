@@ -116,13 +116,8 @@ section {
 }
 
 @keyframes textFadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
+    0% { opacity: 0; transform: translateY(40px); }
     100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes bgScale {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.1); }
 }
 
 @keyframes pulse {
@@ -416,11 +411,14 @@ section {
     padding: 0;
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    min-height: 100vh;
+    background-color: #333; /* Fallback for the entire section */
 }
 
 .home .swiper {
-    height: 100%;
+    width: 100%;
+    height: 100vh; /* Ensure Swiper takes full viewport height */
+    min-height: 100vh;
 }
 
 .home .swiper-slide {
@@ -428,10 +426,13 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: cover;
-    background-position: center;
-    animation: bgScale 6s ease forwards;
-    will-change: transform;
+    width: 100%;
+    height: 100vh; /* Ensure slide takes full viewport height */
+    min-height: 100vh;
+    background-size: cover !important; /* Override inline style if needed */
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-color: #333; /* Ensure fallback color */
 }
 
 .home .swiper-slide::before {
@@ -441,7 +442,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25));
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
     z-index: 1;
 }
 
@@ -449,8 +450,14 @@ section {
     position: relative;
     z-index: 2;
     text-align: center;
-    max-width: 80rem;
+    max-width: 90rem;
     padding: 3rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+}
+
+.home .content .animate-text {
+    opacity: 1; /* Ensure immediate visibility */
 }
 
 .home .content h3 {
@@ -460,10 +467,6 @@ section {
     line-height: 1.1;
     font-weight: 800;
     text-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.8);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: textFadeIn 0.6s ease forwards;
-    animation-delay: 0.1s;
 }
 
 .home .content p {
@@ -473,20 +476,12 @@ section {
     margin: 2rem auto;
     max-width: 60rem;
     text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: textFadeIn 0.6s ease forwards;
-    animation-delay: 0.2s;
 }
 
 .home .content .btn {
     padding: 1.5rem 4.5rem;
     font-size: 2.1rem;
     box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.4);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: textFadeIn 0.6s ease forwards;
-    animation-delay: 0.3s;
 }
 
 .home .swiper-button-next,
@@ -495,7 +490,7 @@ section {
     transform: translateY(-50%);
     height: 6rem;
     width: 6rem;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     box-shadow: var(--box-shadow);
     transition: background 0.3s ease, transform 0.3s ease;
@@ -528,7 +523,7 @@ section {
 
 .home .swiper-pagination-bullet {
     background: var(--white);
-    opacity: 0.6;
+    opacity: 0.8;
     width: 1.2rem;
     height: 1.2rem;
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -537,16 +532,10 @@ section {
 .home .swiper-pagination-bullet-active {
     background: var(--yellow);
     opacity: 1;
-    animation: pulse 1s ease infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .home .swiper-slide,
-    .home .content h3,
-    .home .content p,
-    .home .content .btn,
-    .home .swiper-pagination-bullet-active {
-        animation: none;
+    .home .content .animate-text {
         opacity: 1;
         transform: none;
     }
@@ -816,7 +805,7 @@ section {
     margin-bottom: 1rem;
 }
 
-.projects .box-container .box .content p {
+.projects .box-container .box |content p {
     font-size: 1.5rem;
     color: var(--light-color);
     line-height: 1.8;
@@ -1064,10 +1053,10 @@ section {
 
 .whatsapp-float {
     position: fixed;
-    bottom: 3rem;
-    right: 3rem;
-    width: 4.5rem;
-    height: 4.5rem;
+    bottom: 8rem;
+    right: 8rem;
+    width: 8rem;
+    height: 8rem;
     background: var(--black);
     color: var(--white);
     border-radius: 50%;
@@ -1080,7 +1069,7 @@ section {
 }
 
 .whatsapp-float i {
-    font-size: 2.4rem;
+    font-size: 6.2rem;
 }
 
 .whatsapp-float:hover {
@@ -1166,7 +1155,11 @@ section {
 @media (max-width: 768px) {
     .header .search-form { width: 90%; }
     .header .login-form { width: 90%; }
-    .home { height: 80vh; }
+    .home { min-height: 80vh; }
+    .home .swiper, .home .swiper-slide {
+        height: 80vh; /* Match the section height */
+        min-height: 80vh;
+    }
     .home .content { max-width: 90vw; padding: 2rem; }
     .home .content h3 { font-size: 4rem; }
     .home .content p { font-size: 1.8rem; margin: 1.5rem auto; }
@@ -1178,7 +1171,6 @@ section {
     .home .swiper-button-prev { left: 1.5rem; }
     .home .swiper-button-next { right: 1.5rem; }
     .home .swiper-pagination { bottom: 3rem; }
-    .home .swiper-slide { animation: none; }
     .about .row { gap: 2rem; margin-bottom: 3rem; }
     .about .row .image,
     .about .row .content { flex: 1 1 100%; }
@@ -1191,13 +1183,30 @@ section {
     .about .mission-box { padding: 1.5rem; }
     .about .mission-box h4 { font-size: 2rem; }
     .about .mission-box p { font-size: 1.5rem; }
-    .about .values { grid-template-columns: 1fr; gap: 1rem; }
-    .about .values .value-item { padding: 1.2rem; }
-    .about .values .value-item i { font-size: 3rem; }
-    .about .values .value-item h5 { font-size: 1.6rem; }
-    .about .values .value-item p { font-size: 1.3rem; }
-    .about .achievements { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-    .about .achievement-box { padding: 1.5rem; }
+    /* Update Values to Single Row */
+    .about .values {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 1rem;
+        grid-template-columns: none; /* Override previous grid */
+    }
+    .about .values .value-item {
+        flex: 0 0 12rem; /* Fixed width for each item */
+        padding: 1rem;
+    }
+    /* Update Achievements to Single Row */
+    .about .achievements {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 1rem;
+        grid-template-columns: none; /* Override previous grid */
+    }
+    .about .achievement-box {
+        flex: 0 0 15rem; /* Fixed width for each achievement */
+        padding: 1rem;
+    }
     .about .achievement-box i { font-size: 3.5rem; }
     .about .achievement-box .numbers h3 { font-size: 3rem; }
     .about .achievement-box .numbers p { font-size: 1.4rem; }
@@ -1226,14 +1235,15 @@ section {
     .contact .row .info,
     .contact .row form { flex: 1 1 100%; }
     .contact .row .info .map img { height: 20rem; }
+    /* Increase WhatsApp Icon Size */
     .whatsapp-float {
         bottom: 2.5rem;
         right: 2rem;
-        width: 4rem;
-        height: 4rem;
+        width: 5rem; /* Increased from 4rem */
+        height: 5rem; /* Increased from 4rem */
     }
     .whatsapp-float i {
-        font-size: 2.2rem;
+        font-size: 2.8rem; /* Increased from 2.2rem */
     }
 }
 
@@ -1247,7 +1257,11 @@ section {
     .header .navbar a { font-size: 2rem; margin: 1rem 0; padding: 0.8rem 1.5rem; width: 90%; }
     section { padding: 2rem 1rem; }
     .heading { font-size: 3.2rem; }
-    .home { height: 70vh; }
+    .home { min-height: 70vh; }
+    .home .swiper, .home .swiper-slide {
+        height: 70vh; /* Match the section height */
+        min-height: 70vh;
+    }
     .home .content h3 { font-size: 3.2rem; }
     .home .content p { font-size: 1.6rem; margin: 1rem auto; }
     .home .content .btn { padding: 1rem 3rem; font-size: 1.6rem; }
@@ -1270,13 +1284,33 @@ section {
     .about .mission-box { padding: 1rem; }
     .about .mission-box h4 { font-size: 1.8rem; }
     .about .mission-box p { font-size: 1.3rem; }
-    .about .values { grid-template-columns: 1fr; gap: 0.8rem; }
-    .about .values .value-item { padding: 1rem; }
+    /* Update Values to Single Row */
+    .about .values {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 0.8rem;
+        grid-template-columns: none; /* Override previous grid */
+    }
+    .about .values .value-item {
+        flex: 0 0 10rem; /* Adjusted for smaller screens */
+        padding: 0.8rem;
+    }
     .about .values .value-item i { font-size: 2.5rem; }
     .about .values .value-item h5 { font-size: 1.5rem; }
     .about .values .value-item p { font-size: 1.2rem; }
-    .about .achievements { grid-template-columns: 1fr; gap: 1rem; }
-    .about .achievement-box { padding: 1rem; }
+    /* Update Achievements to Single Row */
+    .about .achievements {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 0.8rem;
+        grid-template-columns: none; /* Override previous grid */
+    }
+    .about .achievement-box {
+        flex: 0 0 12rem; /* Adjusted for smaller screens */
+        padding: 0.8rem;
+    }
     .about .achievement-box i { font-size: 3rem; }
     .about .achievement-box .numbers h3 { font-size: 2.5rem; }
     .about .achievement-box .numbers p { font-size: 1.3rem; }
@@ -1309,13 +1343,14 @@ section {
     .contact .row form h3 { font-size: 2.5rem; }
     .contact .row .info .map img { height: 15rem; }
     .contact .row form .box { font-size: 1.5rem; }
+    /* Increase WhatsApp Icon Size */
     .whatsapp-float {
         bottom: 2rem;
         right: 1.5rem;
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 4.5rem; /* Increased from 3.5rem */
+        height: 4.5rem; /* Increased from 3.5rem */
     }
     .whatsapp-float i {
-        font-size: 2rem;
+        font-size: 2.5rem; /* Increased from 2rem */
     }
 }

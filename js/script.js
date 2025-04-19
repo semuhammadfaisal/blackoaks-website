@@ -94,6 +94,16 @@ try {
             nextSlideMessage: "Next slide",
             paginationBulletMessage: "Go to slide {{index}}",
         },
+        on: {
+            slideChange: function () {
+                // Reset animations for all slides
+                document.querySelectorAll('.swiper-slide .content .animate-text').forEach(el => {
+                    el.style.animation = 'none';
+                    el.offsetHeight; // Trigger reflow to restart animation
+                    el.style.animation = null;
+                });
+            },
+        },
     });
     console.log("Swiper initialized successfully");
 } catch (error) {
@@ -120,7 +130,6 @@ contactForm.addEventListener('submit', (e) => {
 const whatsappFloat = document.querySelector('.whatsapp-float');
 if (whatsappFloat) {
     whatsappFloat.addEventListener('click', (e) => {
-        // Link already set in <a href>, but this allows future enhancements (e.g., analytics)
         console.log('WhatsApp icon clicked');
     });
 }
