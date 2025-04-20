@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
 
@@ -29,7 +30,9 @@
     <nav class="navbar" aria-label="Primary Navigation">
         <a href="#home">home</a>
         <a href="#about">about</a>
-        <a href="#projects">projects</a>
+        <a href="projects.html">projects</a>
+        <a href="#services">services</a>
+        <a href="#why-choose-us">why choose us</a>
         <a href="#amenities">amenities</a>
         <a href="#contact">contact</a>
     </nav>
@@ -100,7 +103,7 @@
                 <div class="content">
                     <h3 class="animate-text">Dream Homes Await</h3>
                     <p class="animate-text">Innovative, sustainable, and affordable housing solutions tailored to your lifestyle.</p>
-                    <a href="#projects" class="btn animate-text">Explore Projects</a>
+                    <a href="projects.html" class="btn animate-text">Explore Projects</a>
                 </div>
             </div>
             <div class="swiper-slide slide" style="background: url('images/home-bg-03.jpg') no-repeat center/cover; background-color: #333;" role="img" aria-roledescription="slide" aria-label="University Town Chakdara">
@@ -162,6 +165,7 @@
             </div>
             
             <a href="#contact" class="btn animate-btn">Contact Us</a>
+            <a href="projects.html" class="btn animate-btn">View Projects</a>
         </div>
     </div>
 
@@ -198,103 +202,46 @@
 </section>
 <!-- about section ends -->
 
-<!-- projects section starts -->
-<section class="projects" id="projects" aria-label="Our Projects Section">
-    <h1 class="heading">our projects</h1>
-    <div class="box-container">
-        <div class="box">
-            <div class="image">
-                <img src="images/university-town.jpg" alt="University Town Chakdara">
-            </div>
-            <div class="content">
-                <h3>University Town Chakdara</h3>
-                <h4>A Lifestyle, Not Just a Location</h4>
-                <p>University Town Chakdara is a thoughtfully designed, secure, and sustainable residential project that blends modern living with nature. Strategically located in Chakdara, it offers affordable plots with complete infrastructure and serene surroundings.</p>
-                <div class="features">
-                    <h5>Eco-Friendly Living:</h5>
-                    <ul>
-                        <li>Lush Green Spaces</li>
-                        <li>Filtered Water System</li>
-                        <li>Clean Air Environment</li>
-                    </ul>
-                </div>
-                <div class="payment">
-                    <h5>Payment Plan:</h5>
-                    <ul>
-                        <li>15% Booking | 1.5-Year Installments</li>
-                        <li>10% Discount on Full Payment</li>
-                        <li>Extra 10% for Corner, Park-Facing & Main Road Plots</li>
-                    </ul>
-                </div>
-                <a href="images/university-town-payment-plan.pdf" class="btn download-btn" download>Download Payment Plan</a>
-                <a href="#contact" class="btn">Inquire Now</a>
-            </div>
-        </div>
-        <div class="box">
-            <div class="image">
-                <img src="images/university-villas.jpg" alt="University Villas">
-            </div>
-            <div class="content">
-                <h3>University Villas</h3>
-                <h4>Modern Living Meets Urban Comfort</h4>
-                <p>University Villas is the second premium project by Black OAKS, offering stylish, well-planned villas that redefine residential standards. Designed for families who value comfort, design, and easy access to daily essentials.</p>
-                <div class="features">
-                    <h5>Key Features:</h5>
-                    <ul>
-                        <li>Elegant Architecture & Modern Layouts</li>
-                        <li>Secure, Gated Environment</li>
-                        <li>Proximity to Schools, Clinics, and Markets</li>
-                        <li>Developed Roads, Sewerage & Street Lights</li>
-                        <li>Peaceful Residential Atmosphere</li>
-                    </ul>
-                </div>
-                <a href="#contact" class="btn">Inquire Now</a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- projects section ends -->
-
 <!-- amenities section starts -->
 <section class="amenities" id="amenities" aria-label="Amenities Section">
     <h1 class="heading">amenities</h1>
     <div class="box-container">
-        <div class="box">
+        <div class="box" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
             <img src="images/park.jpg" alt="Parks & Playgrounds">
             <h3>Parks & Playgrounds</h3>
             <p>Family-friendly spaces for leisure and health.</p>
         </div>
-        <div class="box">
+        <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <img src="images/Mosque.jpg" alt="Mosque">
             <h3>Mosque</h3>
             <p>A peaceful place of worship easily accessible to all blocks.</p>
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
             <img src="images/clinic.jpg" alt="Clinic">
             <h3>Clinic</h3>
             <p>24/7 primary healthcare for residents.</p>
         </div>
-        <div class="box">
+        <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
             <img src="images/school.jpg" alt="School">
             <h3>School</h3>
             <p>Quality education for the next generation.</p>
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
             <img src="images/market.jpg" alt="Market">
             <h3>Market</h3>
             <p>Daily essentials just steps away.</p>
         </div>
-        <div class="box">
+        <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
             <img src="images/street lights.jpg" alt="Solar-Powered Street Lights">
             <h3>Solar-Powered Street Lights</h3>
             <p>Sustainability meets convenience.</p>
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="700">
             <img src="images/Sewerage system.jpg" alt="Underground Services">
             <h3>Underground Services</h3>
             <p>Reliable power, sewerage & clean surroundings.</p>
         </div>
-        <div class="box">
+        <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
             <img src="images/Boundary.jpg" alt="24/7 Security">
             <h3>24/7 Security</h3>
             <p>Boundary walls, barbed wires, and CCTV surveillance.</p>
@@ -302,6 +249,89 @@
     </div>
 </section>
 <!-- amenities section ends -->
+
+<!-- services section starts -->
+<section class="services" id="services" aria-label="Our Services Section">
+    <h1 class="heading">our services</h1>
+    <div class="box-container">
+        <div class="box" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+            <img src="images/property-buying.webp" alt="Property Buying & Selling">
+            <h3>Property Buying & Selling</h3>
+            <p>Expert guidance to buy or sell residential and commercial properties with ease and confidence.</p>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <img src="images/construction.webp" alt="Construction Services">
+            <h3>Construction Services</h3>
+            <p>High-quality residential and commercial construction with a focus on durability and design.</p>
+        </div>
+        <div class="box" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+            <img src="images/property-management.webp" alt="Property Management">
+            <h3>Property Management</h3>
+            <p>Comprehensive management services to maintain and enhance your property’s value.</p>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <img src="images/real-estate-consulting.jpg" alt="Real Estate Consulting">
+            <h3>Real Estate Consulting</h3>
+            <p>Personalized advice for investments, market trends, and property development strategies.</p>
+        </div>
+        <div class="box" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
+            <img src="images/land-development.jpg" alt="Land Development">
+            <h3>Land Development</h3>
+            <p>Transforming raw land into thriving residential and commercial communities.</p>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+            <img src="images/legal-services.jpeg" alt="Legal & Documentation Services">
+            <h3>Legal & Documentation Services</h3>
+            <p>Assistance with property documentation, contracts, and legal compliance.</p>
+        </div>
+    </div>
+</section>
+<!-- services section ends -->
+
+<!-- why choose us section starts -->
+<section class="why-choose-us" id="why-choose-us" aria-label="Why Choose Us Section">
+    <h1 class="heading">why choose us</h1>
+    <div class="row" data-aos="fade-up" data-aos-duration="1000">
+        <div class="image">
+            <img src="images/why-choose-us.jpg" alt="Black OAKS Commitment to Excellence">
+            <div class="overlay">
+                <h3>Your Trusted Real Estate Partner</h3>
+                <p>Building communities with integrity and innovation</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="section-header">
+                <h3 class="animate-text">Partner with Excellence</h3>
+                <div class="divider"></div>
+            </div>
+            <p class="highlight-text">At <b>Black OAKS</b>, we go beyond real estate development—we create lasting value through trust, quality, and innovation. Here’s why we’re the right choice for your property needs.</p>
+            <div class="reasons">
+                <div class="reason-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                    <i class="fas fa-star"></i>
+                    <h5>Proven Experience</h5>
+                    <p>Over 15 years of delivering successful projects across Khyber Pakhtunkhwa.</p>
+                </div>
+                <div class="reason-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                    <i class="fas fa-check-circle"></i>
+                    <h5>Uncompromising Quality</h5>
+                    <p>Premium construction and sustainable designs built to last.</p>
+                </div>
+                <div class="reason-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+                    <i class="fas fa-handshake"></i>
+                    <h5>Trusted Relationships</h5>
+                    <p>Transparent dealings and personalized service for every client.</p>
+                </div>
+                <div class="reason-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
+                    <i class="fas fa-leaf"></i>
+                    <h5>Sustainable Innovation</h5>
+                    <p>Eco-friendly solutions for modern, community-focused living.</p>
+                </div>
+            </div>
+            <a href="#contact" class="btn animate-btn">Get Started Today</a>
+        </div>
+    </div>
+</section>
+<!-- why choose us section ends -->
 
 <!-- contact section starts -->
 <section class="contact" id="contact" aria-label="Contact Us Section">
@@ -349,8 +379,66 @@
 <a href="https://wa.me/923132222411" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
 </a>
-
 <!-- contact section ends -->
+
+<!-- footer section starts -->
+<footer class="footer" aria-label="Footer Section">
+    <div class="footer-container">
+        <div class="footer-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <h3>About Black OAKS</h3>
+            <a href="#" class="logo"><img src="images/footer-logo.png" alt="Black OAKS Group Logo"></a>
+            <p>Black OAKS Group is a trusted real estate developer in Khyber Pakhtunkhwa, delivering premium, sustainable housing projects for modern living.</p>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose-us">Why Choose Us</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <h3>Contact Info</h3>
+            <div class="details">
+                <i class="fas fa-phone"></i>
+                <p>+92 313 2222411</p>
+            </div>
+            <div class="details">
+                <i class="fas fa-envelope"></i>
+                <p>info@theblackoaks.com</p>
+            </div>
+            <div class="details">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Head Office: Black OAKS Office PRC Chowk, Opposite DC Office, Mardan</p>
+            </div>
+            <div class="details">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Site Office: University Town, Taimargara Road main Bazar Chakdara</p>
+            </div>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <h3>Newsletter</h3>
+            <p>Subscribe to our newsletter for the latest updates on our projects and offers.</p>
+            <form id="newsletter-form">
+                <input type="email" name="email" placeholder="Your Email" class="box" aria-label="Email" required>
+                <input type="submit" value="Subscribe" class="btn">
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Black OAKS Group of Companies. All Rights Reserved.</p>
+        <div class="share">
+            <a href="https://www.facebook.com/profile.php?id=61573183413331" class="fab fa-facebook-f" aria-label="Facebook"></a>
+            <a href="https://www.instagram.com/blackoaks_official/?hl=en" class="fab fa-instagram" aria-label="Instagram"></a>
+            <a href="https://www.tiktok.com/@black.oaks.group" class="fab fa-tiktok" aria-label="Tiktok"></a>
+        </div>
+    </div>
+</footer>
+<!-- footer section ends -->
 
 <script type="application/ld+json">
     {
@@ -370,9 +458,10 @@
       "telephone": "+923132222411",
       "email": "info@theblackoaks.com"
     }
-    </script>
+</script>
     
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

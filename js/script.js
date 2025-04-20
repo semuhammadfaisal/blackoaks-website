@@ -133,3 +133,10 @@ if (whatsappFloat) {
         console.log('WhatsApp icon clicked');
     });
 }
+
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: false, // Animations repeat when scrolling back
+});
