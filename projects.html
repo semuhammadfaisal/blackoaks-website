@@ -22,76 +22,13 @@
 </head>
 <body>
 
-    <!-- header section starts -->
-<header class="header" aria-label="Main Navigation">
-    <a href="index.html" class="logo"><img src="images/logo.png" alt="Black OAKS Group Logo"></a>
-
-    <nav class="navbar" aria-label="Primary Navigation">
-        <a href="index.html#home">home</a>
-        <a href="index.html#about">about</a>
-        <a href="projects.html">projects</a>
-        <a href="index.html#amenities">amenities</a>
-        <a href="index.html#contact">contact</a>
-    </nav>
-
-    <div class="icons">
-        <div class="fas fa-search" id="search-btn" aria-label="Open Search" role="button" tabindex="0"></div>
-        <div class="fas fa-user" id="login-btn" aria-label="Open Login Form" role="button" tabindex="0"></div>
-        <div class="fas fa-bars" id="menu-btn" aria-label="Toggle Menu" role="button" tabindex="0"></div>
-    </div>
-
-    <div class="search-form">
-        <input type="search" id="search-box" placeholder="search here..." aria-label="Search">
-        <label for="search-box" class="fas fa-search"></label>
-    </div>
-
-    <form class="login-form">
-        <h3>login now</h3>
-        <input type="email" placeholder="your email" class="box" aria-label="Email">
-        <input type="password" placeholder="your password" class="box" aria-label="Password">
-        <div class="flex">
-            <input type="checkbox" id="remember" aria-label="Remember Me">
-            <label for="remember">remember me</label>
-            <a href="#">forgot password?</a>
-        </div>
-        <input type="submit" value="login now" class="btn">
-        <p>don't have an account? <a href="#">create one</a></p>
-    </form>
-
-    <div class="contact-info">
-        <div id="close-contact-info" class="fas fa-times" aria-label="Close Contact Info" role="button" tabindex="0"></div>
-        <div class="info">
-            <i class="fas fa-phone"></i>
-            <h3>phone number</h3>
-            <p>+123-456-7890</p>
-        </div>
-        <div class="info">
-            <i class="fas fa-envelope"></i>
-            <h3>email address</h3>
-            <p>example@example.com</p>
-        </div>
-        <div class="info">
-            <i class="fas fa-map-marker-alt"></i>
-            <h3>office address</h3>
-            <p>Khyber Pakhtunkhwa, Pakistan</p>
-        </div>
-        <div class="share">
-            <a href="#" class="fab fa-facebook-f" aria-label="Facebook"></a>
-            <a href="#" class="fab fa-twitter" aria-label="Twitter"></a>
-            <a href="#" class="fab fa-instagram" aria-label="Instagram"></a>
-            <a href="#" class="fab fa-linkedin" aria-label="LinkedIn"></a>
-        </div>
-    </div>
-</header>
-<!-- header section ends -->
-
 <!-- projects section starts -->
 <section class="projects" id="projects" aria-label="Our Projects Section">
     <h1 class="heading">our projects</h1>
     <div class="box-container">
-        <div class="box">
+        <div class="box" data-aos="fade-up">
             <div class="image">
-                <img src="images/university-town.jpg" alt="University Town Chakdara">
+                <img src="images/university-town.jpg" alt="University Town Chakdara" loading="lazy">
             </div>
             <div class="content">
                 <h3>University Town Chakdara</h3>
@@ -113,14 +50,16 @@
                         <li>Extra 10% for Corner, Park-Facing & Main Road Plots</li>
                     </ul>
                 </div>
-                <a href="images/university-town-payment-plan.pdf" class="btn download-btn" download>Download Payment Plan</a>
-                <a href="index.html#contact" class="btn">Inquire Now</a>
-                <a href="index.html#amenities" class="btn">See Amenities</a>
+                <div class="button-group">
+                    <a href="images/university-town-payment-plan.pdf" class="btn download-btn" download>Download Payment Plan</a>
+                    <a href="index.html#contact" class="btn">Inquire Now</a>
+                    <a href="index.html#amenities" class="btn">See Amenities</a>
+                </div>
             </div>
         </div>
-        <div class="box">
+        <div class="box" data-aos="fade-up">
             <div class="image">
-                <img src="images/university-villas.jpg" alt="University Villas">
+                <img src="images/university-villas.jpg" alt="University Villas" loading="lazy">
             </div>
             <div class="content">
                 <h3>University Villas</h3>
@@ -136,12 +75,77 @@
                         <li>Peaceful Residential Atmosphere</li>
                     </ul>
                 </div>
-                <a href="index.html#contact" class="btn">Inquire Now</a>
+                <div class="button-group">
+                    <a href="index.html#contact" class="btn">Inquire Now</a>
+                </div>
             </div>
         </div>
     </div>
+    <div class="back-to-home">
+        <a href="index.html" class="btn">Back to Home</a>
+    </div>
 </section>
 <!-- projects section ends -->
+
+<!-- footer section starts -->
+<footer class="footer" aria-label="Footer Section">
+    <div class="footer-container">
+        <div class="footer-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <h3>About Black OAKS</h3>
+            <a href="#" class="logo"><img src="images/footer-logo.png" alt="Black OAKS Group Logo"></a>
+            <p>Black OAKS Group is a trusted real estate developer in Khyber Pakhtunkhwa, delivering premium, sustainable housing projects for modern living.</p>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose-us">Why Choose Us</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#recent-notification">Notifications</a></li>
+            </ul>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <h3>Contact Info</h3>
+            <div class="details">
+                <i class="fas fa-phone"></i>
+                <p>+92 313 2222411</p>
+            </div>
+            <div class="details">
+                <i class="fas fa-envelope"></i>
+                <p>info@theblackoaks.com</p>
+            </div>
+            <div class="details">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Head Office: Black OAKS Office PRC Chowk, Opposite DC Office, Mardan</p>
+            </div>
+            <div class="details">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Site Office: University Town, Taimargara Road main Bazar Chakdara</p>
+            </div>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <h3>Newsletter</h3>
+            <p>Subscribe to our newsletter for the latest updates on our projects and offers.</p>
+            <form id="newsletterForm">
+                <input type="email" name="email" placeholder="Your Email" class="box" aria-label="Email" required>
+                <input type="submit" value="Subscribe" class="btn">
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Black OAKS Group of Companies. All Rights Reserved.</p>
+        <div class="share">
+            <a href="https://www.facebook.com/profile.php?id=61573183413331" class="fab fa-facebook-f" aria-label="Facebook"></a>
+            <a href="https://www.instagram.com/blackoaks_official/?hl=en" class="fab fa-instagram" aria-label="Instagram"></a>
+            <a href="https://www.tiktok.com/@black.oaks.group" class="fab fa-tiktok" aria-label="Tiktok"></a>
+        </div>
+    </div>
+</footer>
+<!-- footer section ends -->
 
 <!-- WhatsApp Floating Icon -->
 <a href="https://wa.me/923132222411" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
