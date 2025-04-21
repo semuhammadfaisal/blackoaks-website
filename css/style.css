@@ -42,6 +42,8 @@ html::-webkit-scrollbar-thumb {
 
 section {
     padding: 5rem 10%;
+    display: block;
+    visibility: visible;
 }
 
 .heading {
@@ -51,9 +53,6 @@ section {
     text-transform: capitalize;
     padding-left: 1.2rem;
     border-left: 1rem solid var(--yellow);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease forwards;
 }
 
 .btn {
@@ -219,7 +218,6 @@ section {
     align-items: center;
     gap: 1rem;
     border-radius: 0.5rem;
-    animation: fadeIn .3s ease;
 }
 
 .search-form.active {
@@ -256,7 +254,6 @@ section {
     padding: 2rem;
     text-align: center;
     border-radius: 0.5rem;
-    animation: fadeIn .3s ease;
     display: none;
 }
 
@@ -416,14 +413,24 @@ section {
 .home {
     padding: 0;
     position: relative;
-    overflow: hidden",},
+    overflow: hidden;
     min-height: 100vh;
-    background-color: #333; /* Fallback for the entire section */
+    background-color: #333;
+}
+
+.home[data-aos="fade-in"] {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.home[data-aos="fade-in"].aos-animate {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .home .swiper {
     width: 100%;
-    height: 100vh; /* Ensure Swiper takes full viewport height */
+    height: 100vh;
     min-height: 100vh;
 }
 
@@ -433,12 +440,12 @@ section {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh; /* Ensure slide takes full viewport height */
+    height: 100vh;
     min-height: 100vh;
-    background-size: cover !important; /* Override inline style if needed */
+    background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
-    background-color: #333; /* Ensure fallback color */
+    background-color: #333;
 }
 
 .home .swiper-slide::before {
@@ -460,10 +467,6 @@ section {
     padding: 3rem;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 1rem;
-}
-
-.home .content .animate-text {
-    opacity: 1; /* Ensure immediate visibility */
 }
 
 .home .content h3 {
@@ -499,7 +502,6 @@ section {
     background: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     box-shadow: var(--box-shadow);
-    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .home .swiper-button-next:hover,
@@ -532,7 +534,6 @@ section {
     opacity: 0.8;
     width: 1.2rem;
     height: 1.2rem;
-    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .home .swiper-pagination-bullet-active {
@@ -540,17 +541,22 @@ section {
     opacity: 1;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .home .content .animate-text {
-        opacity: 1;
-        transform: none;
-    }
-}
-
 .about {
     background: var(--light-bg);
     position: relative;
     overflow: hidden;
+    display: block;
+    visibility: visible;
+}
+
+.about[data-aos="fade-right"] {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.about[data-aos="fade-right"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .about .row {
@@ -743,146 +749,29 @@ section {
     color: var(--light-color);
 }
 
-.projects {
-    background: var(--white);
-}
-
-.projects .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
-    gap: 3rem;
-}
-
-.projects .box-container .box {
-    background: var(--white);
-    border-radius: 1.5rem;
-    overflow: hidden;
-    box-shadow: var(--box-shadow);
-    transition: transform 0.4s ease;
-}
-
-.projects .box-container .box:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-.projects .box-container .box .image {
-    position: relative;
-    height: 28rem;
-    overflow: hidden;
-}
-
-.projects .box-container .box .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.projects .box-container .box:hover .image img {
-    transform: scale(1.08);
-}
-
-.download-btn {
-    background: var(--yellow);
-    color: var(--black);
-    margin-right: 1rem;
-}
-
-.download-btn:hover {
-    background: var(--black);
-    color: var(--white);
-}
-
-.projects .box-container .box .content {
-    padding: 2.5rem;
-}
-
-.projects .box-container .box .content h3 {
-    font-size: 2.8rem;
-    color: var(--black);
-    text-transform: capitalize;
-    margin-bottom: 0.8rem;
-}
-
-.projects .box-container .box .content h4 {
-    font-size: 2rem;
-    color: var(--yellow);
-    margin-bottom: 1rem;
-}
-
-.projects .box-container .box .content p {
-    font-size: 1.5rem;
-    color: var(--light-color);
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
-.projects .box-container .box .content .features,
-.projects .box-container .box .content .payment {
-    margin-bottom: 1.5rem;
-}
-
-.projects .box-container .box .content .features h5,
-.projects .box-container .box .content .payment h5 {
-    font-size: 1.8rem;
-    color: var(--black);
-    margin-bottom: 0.8rem;
-}
-
-.projects .box-container .box .content .features ul,
-.projects .box-container .box .content .payment ul {
-    list-style: none;
-    padding: 0;
-}
-
-.projects .box-container .box .content .features li,
-.projects .box-container .box .content .payment li {
-    font-size: 1.4rem;
-    color: var(--black);
-    margin: 0.6rem 0;
-    display: flex;
-    align-items: center;
-}
-
-.projects .box-container .box .content .features li::before,
-.projects .box-container .box .content .payment li::before {
-    content: '✔';
-    color: var(--yellow);
-    font-size: 1.5rem;
-    margin-right: 0.8rem;
-}
-
-.projects .box-container .box .content .btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 1.2rem;
-    font-size: 1.8rem;
-}
-
 .amenities {
     background: var(--light-bg);
+    display: block;
+    visibility: visible;
 }
 
 .amenities .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-    gap: 2.5rem;
+    gap: 1.5rem;
 }
 
 .amenities .box-container .box {
     background: var(--white);
     border-radius: 1.5rem;
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
     box-shadow: var(--box-shadow);
-    animation: glow 3s ease-in-out infinite;
 }
 
 .amenities .box-container .box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.2);
 }
 
 .amenities .box-container .box img {
@@ -891,7 +780,7 @@ section {
     height: 30rem;
     object-fit: cover;
     border-radius: 1rem;
-    margin: 0 auto 1rem;
+    margin: 0.5rem auto;
     display: block;
     transition: transform 0.4s ease;
 }
@@ -904,23 +793,36 @@ section {
     font-size: 2.2rem;
     color: var(--black);
     text-transform: capitalize;
-    margin-bottom: 0.8rem;
+    margin: 0.5rem 0;
 }
 
 .amenities .box-container .box p {
     font-size: 1.4rem;
     color: var(--light-color);
     line-height: 1.8;
+    margin-bottom: 0.5rem;
 }
 
 .services {
     background: var(--white);
+    display: block;
+    visibility: visible;
+    min-height: 50rem;
+}
+
+.services[data-aos="flip-left"] {
+    opacity: 0;
+}
+
+.services[data-aos="flip-left"].aos-animate {
+    opacity: 1;
 }
 
 .services .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
     gap: 2.5rem;
+    visibility: visible;
 }
 
 .services .box-container .box {
@@ -929,7 +831,6 @@ section {
     padding: 1rem;
     text-align: center;
     box-shadow: var(--box-shadow);
-    animation: glow 3s ease-in-out infinite;
 }
 
 .services .box-container .box:hover {
@@ -969,6 +870,18 @@ section {
     background: linear-gradient(135deg, var(--light-bg), rgba(245, 191, 35, 0.1));
     position: relative;
     overflow: hidden;
+    display: block;
+    visibility: visible;
+}
+
+.why-choose-us[data-aos="fade-left"] {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.why-choose-us[data-aos="fade-left"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .why-choose-us .row {
@@ -1064,7 +977,6 @@ section {
     border-radius: 1rem;
     box-shadow: var(--box-shadow);
     transition: transform 0.3s ease;
-    animation: glow 3s ease-in-out infinite;
 }
 
 .why-choose-us .reasons .reason-item:hover {
@@ -1098,6 +1010,18 @@ section {
 
 .contact {
     background: var(--white);
+    display: block;
+    visibility: visible;
+}
+
+.contact[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.contact[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .contact .row {
@@ -1194,6 +1118,62 @@ section {
 }
 
 .contact .row form .btn {
+    width: 100%;
+    padding: 1.2rem;
+}
+
+.recent-notification {
+    background: var(--light-bg);
+    display: block;
+    visibility: visible;
+    min-height: 50rem;
+}
+
+.recent-notification[data-aos="slide-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.recent-notification[data-aos="slide-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.recent-notification .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: 2rem;
+    visibility: visible;
+}
+
+.recent-notification .box-container .box {
+    background: var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.recent-notification .box-container .box:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+}
+
+.recent-notification .box-container .box h3 {
+    font-size: 2.2rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.recent-notification .box-container .box p {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    margin-bottom: 1.5rem;
+}
+
+.recent-notification .box-container .box .btn {
+    display: inline-block;
     width: 100%;
     padding: 1.2rem;
 }
@@ -1357,18 +1337,33 @@ section {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .whatsapp-float, .amenities .box-container .box, .services .box-container .box, .why-choose-us .reasons .reason-item {
+    .whatsapp-float, 
+    .amenities .box-container .box, 
+    .services .box-container .box, 
+    .why-choose-us .reasons .reason-item, 
+    .recent-notification .box-container .box,
+    .home, 
+    .about, 
+    .services, 
+    .why-choose-us, 
+    .contact, 
+    .recent-notification {
         animation: none;
+        transition: none;
+    }
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
     }
 }
 
-/* Media Queries */
 @media (max-width: 1200px) {
     .header { padding: 1.5rem 5%; }
     section { padding: 4rem 5%; }
     .home .content { max-width: 70rem; }
-    .projects .box-container, .services .box-container { grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr)); }
+    .services .box-container { grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); }
     .amenities .box-container { grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); }
+    .recent-notification .box-container { grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); }
     .why-choose-us .row .content .section-header h3 { font-size: 4.5rem; }
     .footer { padding: 4rem 5%; }
 }
@@ -1395,10 +1390,6 @@ section {
     }
     .header .navbar.active {
         transform: translateY(0);
-        animation: slideInDown 0.4s ease forwards;
-    }
-    .header .navbar:not(.active) {
-        animation: slideOutUp 0.4s ease forwards;
     }
     .header .navbar a {
         font-size: 2.2rem;
@@ -1407,19 +1398,7 @@ section {
         width: 80%;
         text-align: center;
         border-radius: 0.5rem;
-        opacity: 0;
-        transform: translateY(20px);
     }
-    .header .navbar.active a {
-        animation: fadeInUp 0.3s ease forwards;
-    }
-    .header .navbar a:nth-child(1) { animation-delay: 0.1s; }
-    .header .navbar a:nth-child(2) { animation-delay: 0.2s; }
-    .header .navbar a:nth-child(3) { animation-delay: 0.3s; }
-    .header .navbar a:nth-child(4) { animation-delay: 0.4s; }
-    .header .navbar a:nth-child(5) { animation-delay: 0.5s; }
-    .header .navbar a:nth-child(6) { animation-delay: 0.6s; }
-    .header .navbar a:nth-child(7) { animation-delay: 0.7s; }
     .header .navbar a:hover {
         background: var(--yellow);
         color: var(--black);
@@ -1427,9 +1406,9 @@ section {
     }
     .home .content h3 { font-size: 5rem; }
     .home .content p { font-size: 2rem; }
-    .projects .box-container, .services .box-container { grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); }
-    .projects .box-container .box .image { height: 26rem; }
+    .services .box-container { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
     .amenities .box-container { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+    .recent-notification .box-container { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
     .about .row .content .section-header h3 { font-size: 3.5rem; }
     .about .values { grid-template-columns: repeat(2, 1fr); }
     .why-choose-us .row .content .section-header h3 { font-size: 4rem; }
@@ -1445,7 +1424,7 @@ section {
     .header .login-form { width: 90%; }
     .home { min-height: 80vh; }
     .home .swiper, .home .swiper-slide {
-        height: 80vh; /* Match the section height */
+        height: 80vh;
         min-height: 80vh;
     }
     .home .content { max-width: 90vw; padding: 2rem; }
@@ -1459,11 +1438,63 @@ section {
     .home .swiper-button-prev { left: 1.5rem; }
     .home .swiper-button-next { right: 1.5rem; }
     .home .swiper-pagination { bottom: 3rem; }
-    .about .row { gap: 2rem; margin-bottom: 3rem; }
+    .about .row { flex-direction: column; }
     .about .row .image,
     .about .row .content { flex: 1 1 100%; }
-    .about .row .image img { max-height: 35rem; object-fit: cover; }
-    .about .row .image .overlay { padding: 2rem; }
-    .about .row .image .overlay h3 { font-size: 2rem; }
-    .about .row .image .overlay p { font-size: 1.4rem; }
     .about .row .content .section-header h3 { font-size: 3rem; }
+    .about .values { grid-template-columns: 1fr; }
+    .about .achievements { grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
+    .services .box-container { grid-template-columns: 1fr; }
+    .amenities .box-container { grid-template-columns: 1fr; }
+    .recent-notification .box-container { grid-template-columns: 1fr; }
+    .why-choose-us .row { flex-direction: column; }
+    .why-choose-us .row .image,
+    .why-choose-us .row .content { flex: 1 1 100%; }
+    .why-choose-us .row .content .section-header h3 { font-size: 3.5rem; }
+    .why-choose-us .reasons { grid-template-columns: 1fr; }
+    .contact .row { flex-direction: column; }
+    .contact .row .info,
+    .contact .row form { flex: 1 1 100%; }
+    .whatsapp-float { bottom: 2rem; right: 2rem; width: 6rem; height: 6rem; }
+    .whatsapp-float i { font-size: 3.5rem; }
+    .footer .footer-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 450px) {
+    html { font-size: 50%; }
+    .header .contact-info { width: 100%; }
+    .home .content h3 { font-size: 3.5rem; }
+    .home .content p { font-size: 1.6rem; }
+    .about .row .content .section-header h3 { font-size: 2.8rem; }
+    .why-choose-us .row .content .section-header h3 { font-size: 3rem; }
+    .contact .row .info h3,
+    .contact .row form h3 { font-size: 2.5rem; }
+    .footer .footer-bottom { flex-direction: column; align-items: center; }
+    .footer .footer-bottom .share { margin-top: 1rem; }
+    .amenities .box-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .amenities .box-container .box {
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .amenities .box-container .box img {
+        width: 100%;
+        height: auto;
+        max-width: none;
+        max-height: none;
+        margin: 0;
+        border-radius: 0;
+    }
+    .amenities .box-container .box h3 {
+        margin: 0;
+        padding: 0.5rem 0;
+    }
+    .amenities .box-container .box p {
+        margin: 0;
+        padding: 0 0 0.5rem;
+    }
+}
