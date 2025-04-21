@@ -438,7 +438,7 @@ section {
     padding: 0;
     margin: 0;
     position: relative;
-    min-height: 100vh;
+    min-height: 90vh; /* Adjusted height for larger screens */
     width: 100vw;
     background-color: #333;
     display: flex;
@@ -457,8 +457,8 @@ section {
 
 .home .swiper {
     width: 100vw;
-    height: 100vh;
-    min-height: 100vh;
+    height: 90vh; /* Adjusted height for larger screens */
+    min-height: 90vh;
     margin: 0;
 }
 
@@ -468,7 +468,7 @@ section {
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 100vh;
+    height: 90vh; /* Adjusted height for larger screens */
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -1075,15 +1075,18 @@ section {
 
 .projects .box .image {
     width: 100%;
-    height: 25rem;
+    height: 30rem;
     position: relative;
     overflow: hidden;
+    aspect-ratio: 4/3;
 }
 
 .projects .box .image img {
     width: 100%;
     height: 100%;
+    max-width: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.4s ease;
 }
 
@@ -1534,7 +1537,7 @@ section {
 
 @media (min-width: 1921px) {
     .projects .box .image {
-        height: 30rem;
+        height: 35rem;
     }
 }
 
@@ -1547,7 +1550,7 @@ section {
     .recent-notification .box-container { grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); }
     .why-choose-us .row .content .section-header h3 { font-size: 4.5rem; }
     .footer { padding: 4rem 1rem; }
-    .projects .box .image { height: 22rem; }
+    .projects .box .image { height: 28rem; }
 }
 
 @media (max-width: 991px) {
@@ -1600,7 +1603,7 @@ section {
     .why-choose-us .reasons .reason-item p { font-size: 1.5rem; }
     .footer .footer-container { grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); }
     .projects .box-container { grid-template-columns: 1fr; padding: 0 1.5rem; }
-    .projects .box .image { height: 20rem; }
+    .projects .box .image { height: 25rem; }
 }
 
 @media (max-width: 768px) {
@@ -1617,7 +1620,11 @@ section {
     .home .content p { font-size: 1.8rem; margin: 1.5rem auto; }
     .home .content .btn { padding: 1.2rem 3.5rem; font-size: 1.8rem; }
     .home .swiper-button-next,
-    .home .swiper-button-prev { height: 5rem; width: 5rem; }
+    .home .swiper-button-prev { 
+        height: 5rem; 
+        width: 5rem; 
+        top: 70%; /* Moved buttons lower on smaller screens */
+    }
     .home .swiper-button-next::after,
     .home .swiper-button-prev::after { font-size: 2rem; }
     .home .swiper-button-prev { left: 1.5rem; }
@@ -1646,7 +1653,7 @@ section {
     .projects { padding: 3rem 0; }
     .projects .heading { font-size: 3.2rem; }
     .projects .box-container { gap: 2rem; padding: 0 1rem; }
-    .projects .box .image { height: 18rem; }
+    .projects .box .image { height: 22rem; }
     .projects .box .content { padding: 2rem; }
     .projects .box .content h3 { font-size: 2.2rem; }
     .projects .box .content h4 { font-size: 1.8rem; }
@@ -1708,7 +1715,7 @@ section {
     }
     .projects .heading { font-size: 2.8rem; }
     .projects .box-container { gap: 1.5rem; padding: 0 0.5rem; }
-    .projects .box .image { height: 16rem; }
+    .projects .box .image { height: 20rem; }
     .projects .box .content { padding: 1.5rem; }
     .projects .box .content h3 { font-size: 2rem; }
     .projects .box .content h4 { font-size: 1.6rem; }
