@@ -6,8 +6,9 @@
     --white: #fff;
     --light-color: #666;
     --light-bg: #eee;
-    --box-shadow: 0 .7rem 1.5rem rgba(0,0,0,.15);
-    --border: .1rem solid rgba(0,0,0,.2);
+    --box-shadow: 0 0.7rem 1.5rem rgba(0,0,0,0.15);
+    --border: 0.1rem solid rgba(0,0,0,0.2);
+    --green: #28a745;
 }
 
 * {
@@ -18,7 +19,7 @@
     outline: none;
     border: none;
     text-decoration: none;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 html {
@@ -44,6 +45,8 @@ section {
     padding: 5rem 10%;
     display: block;
     visibility: visible;
+    max-width: 140rem;
+    margin: 0 auto;
 }
 
 .heading {
@@ -57,7 +60,7 @@ section {
 
 .btn {
     display: inline-block;
-    margin-top: 1.5rem;
+    margin: 1rem 0.5rem;
     padding: 1.3rem 3.5rem;
     background: var(--black);
     color: var(--white);
@@ -88,6 +91,17 @@ section {
 
 .btn:hover::after {
     left: 100%;
+}
+
+.download-btn {
+    background: var(--black);
+    color: var(--white);
+}
+
+.download-btn:hover {
+    background: var(--green);
+    color: var(--white);
+    transform: scale(1.02);
 }
 
 @keyframes fadeIn {
@@ -1008,6 +1022,145 @@ section {
     box-shadow: 0 0.6rem 1.2rem rgba(0,0,0,0.4);
 }
 
+.projects {
+    background: var(--light-bg);
+    display: block;
+    visibility: visible;
+    width: 100vw;
+    max-width: none;
+    margin: 0;
+    padding: 7rem 0;
+}
+
+.projects[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.projects[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projects .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 4rem;
+    padding: 0 5%;
+}
+
+.projects .box {
+    background: var(--white);
+    border-radius: 1.5rem;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects .box:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.25);
+}
+
+.projects .box .image {
+    width: 100%;
+    height: 40rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: transform 0.4s ease;
+}
+
+.projects .box:hover .image img {
+    transform: scale(1.1);
+}
+
+.projects .box .content {
+    padding: 3rem;
+    background: var(--white);
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.projects .box:hover .content {
+    background: linear-gradient(to bottom, rgba(245, 191, 35, 0.05), var(--white));
+}
+
+.projects .box .content h3 {
+    font-size: 3rem;
+    color: var(--black);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.projects .box .content h4 {
+    font-size: 2.2rem;
+    color: var(--yellow);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.projects .box .content p {
+    font-size: 1.7rem;
+    color: var(--light-color);
+    line-height: 1.9;
+    margin-bottom: 2rem;
+}
+
+.projects .box .content .features,
+.projects .box .content .payment {
+    margin-bottom: 2rem;
+}
+
+.projects .box .content .features h5,
+.projects .box .content .payment h5 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.projects .box .content .features ul,
+.projects .box .content .payment ul {
+    list-style: none;
+    padding-left: 2rem;
+}
+
+.projects .box .content .features ul li,
+.projects .box .content .payment ul li {
+    font-size: 1.6rem;
+    color: var(--light-color);
+    margin-bottom: 0.8rem;
+    position: relative;
+    line-height: 1.9;
+}
+
+.projects .box .content .features ul li::before,
+.projects .box .content .payment ul li::before {
+    content: '\f058';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--yellow);
+    position: absolute;
+    left: -2rem;
+    top: 0.3rem;
+    font-size: 1.8rem;
+}
+
+.projects .box .content .btn {
+    padding: 1.2rem 3rem;
+    font-size: 1.8rem;
+    margin: 0.5rem;
+}
+
 .contact {
     background: var(--white);
     display: block;
@@ -1342,18 +1495,29 @@ section {
     .services .box-container .box, 
     .why-choose-us .reasons .reason-item, 
     .recent-notification .box-container .box,
+    .projects .box,
     .home, 
     .about, 
     .services, 
     .why-choose-us, 
     .contact, 
-    .recent-notification {
+    .recent-notification,
+    .projects {
         animation: none;
         transition: none;
     }
     [data-aos] {
         opacity: 1 !important;
         transform: none !important;
+    }
+}
+
+@media (min-width: 1920px) {
+    .projects .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    }
+    .projects .box .image {
+        height: 45rem;
     }
 }
 
@@ -1364,6 +1528,8 @@ section {
     .services .box-container { grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); }
     .amenities .box-container { grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); }
     .recent-notification .box-container { grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); }
+    .projects .box-container { grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr)); }
+    .projects .box .image { height: 35rem; }
     .why-choose-us .row .content .section-header h3 { font-size: 4.5rem; }
     .footer { padding: 4rem 5%; }
 }
@@ -1409,6 +1575,8 @@ section {
     .services .box-container { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
     .amenities .box-container { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
     .recent-notification .box-container { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+    .projects .box-container { grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); }
+    .projects .box .image { height: 30rem; }
     .about .row .content .section-header h3 { font-size: 3.5rem; }
     .about .values { grid-template-columns: repeat(2, 1fr); }
     .why-choose-us .row .content .section-header h3 { font-size: 4rem; }
@@ -1447,6 +1615,8 @@ section {
     .services .box-container { grid-template-columns: 1fr; }
     .amenities .box-container { grid-template-columns: 1fr; }
     .recent-notification .box-container { grid-template-columns: 1fr; }
+    .projects .box-container { grid-template-columns: 1fr; }
+    .projects .box .image { height: 25rem; }
     .why-choose-us .row { flex-direction: column; }
     .why-choose-us .row .image,
     .why-choose-us .row .content { flex: 1 1 100%; }
@@ -1469,32 +1639,14 @@ section {
     .why-choose-us .row .content .section-header h3 { font-size: 3rem; }
     .contact .row .info h3,
     .contact .row form h3 { font-size: 2.5rem; }
+    .projects .box .content h3 { font-size: 2.6rem; }
+    .projects .box .content h4 { font-size: 2rem; }
+    .projects .box .content p { font-size: 1.5rem; }
+    .projects .box .content .features h5,
+    .projects .box .content .payment h5 { font-size: 1.8rem; }
+    .projects .box .content .features ul li,
+    .projects .box .content .payment ul li { font-size: 1.4rem; }
+    .projects .box .image { height: 20rem; }
     .footer .footer-bottom { flex-direction: column; align-items: center; }
     .footer .footer-bottom .share { margin-top: 1rem; }
-    .amenities .box-container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    .amenities .box-container .box {
-        padding: 0;
-        margin: 0;
-        border-radius: 0;
-        box-shadow: none;
-    }
-    .amenities .box-container .box img {
-        width: 100%;
-        height: auto;
-        max-width: none;
-        max-height: none;
-        margin: 0;
-        border-radius: 0;
-    }
-    .amenities .box-container .box h3 {
-        margin: 0;
-        padding: 0.5rem 0;
-    }
-    .amenities .box-container .box p {
-        margin: 0;
-        padding: 0 0 0.5rem;
-    }
 }
