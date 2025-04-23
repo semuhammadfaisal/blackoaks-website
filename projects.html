@@ -17,16 +17,52 @@
     <link rel="canonical" href="https://www.the-blackoaks.com/projects.html">
     <link rel="shortcut icon" href="images/navlogo.jpg" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fallback for Font Awesome to ensure notification icon loads -->
+    <script>
+        var faLink = document.querySelector('link[href*="font-awesome"]');
+        faLink.onerror = function() {
+            var fallback = document.createElement('link');
+            fallback.rel = 'stylesheet';
+            fallback.href = 'css/font-awesome-fallback.css';
+            document.head.appendChild(fallback);
+        };
+    </script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
+
+<!-- header section starts -->
+<header class="header" aria-label="Main Navigation">
+    <a href="#" class="logo"><img src="images/logo.png" alt="Black OAKS Group Logo"></a>
+
+    <nav class="navbar" aria-label="Primary Navigation">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="projects.html">projects</a>
+        <a href="#services">services</a>
+        <a href="projects.html#amenities">amenities</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-search" id="search-btn" aria-label="Open Search" role="button" tabindex="0"></div>
+        <div class="fas fa-bars" id="menu-btn" aria-label="Toggle Menu" role="button" tabindex="0"></div>
+    </div>
+
+    <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." aria-label="Search">
+        <label for="search-box" class="fas fa-search"></label>
+    </div>
+</header>
+<!-- header section ends -->
 
 <!-- projects section starts -->
 <section class="projects" id="projects" aria-label="Our Projects Section">
     <h1 class="heading">our projects</h1>
     <div class="box-container">
-        <div class="box" data-aos="fade-up">
+        <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
             <div class="image">
                 <img src="images/university-town.jpg" alt="University Town Chakdara" loading="lazy">
             </div>
@@ -53,11 +89,11 @@
                 <div class="button-group">
                     <a href="images/university-town-payment-plan.pdf" class="btn download-btn" download>Download Payment Plan</a>
                     <a href="index.html#contact" class="btn">Inquire Now</a>
-                    <a href="index.html#amenities" class="btn">See Amenities</a>
+                    <a href="#amenities" class="btn">See Amenities</a>
                 </div>
             </div>
         </div>
-        <div class="box" data-aos="fade-up">
+        <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="image">
                 <img src="images/university-villas.jpg" alt="University Villas" loading="lazy">
             </div>
@@ -91,43 +127,43 @@
 <section class="amenities" id="amenities" aria-label="Amenities Section">
     <h1 class="heading">amenities</h1>
     <div class="box-container">
-        <div class="box" data-aos="flip-up" data-aos-duration="1200" data-aos-delay="100">
-            <img src="images/park.jpg" alt="Parks & Playgrounds">
+        <div class="box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
+            <img src="images/park.jpg" alt="Parks & Playgrounds" loading="lazy">
             <h3>Parks & Playgrounds</h3>
             <p>Family-friendly spaces for leisure and health.</p>
         </div>
-        <div class="box" data-aos="zoom-out" data-aos-duration="1200" data-aos-delay="200">
-            <img src="images/Mosque.jpg" alt="Mosque">
+        <div class="box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+            <img src="images/Mosque.jpg" alt="Mosque" loading="lazy">
             <h3>Mosque</h3>
             <p>A peaceful place of worship easily accessible to all blocks.</p>
         </div>
         <div class="box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
-            <img src="images/clinic.jpg" alt="Clinic">
+            <img src="images/clinic.jpg" alt="Clinic" loading="lazy">
             <h3>Clinic</h3>
             <p>24/7 primary healthcare for residents.</p>
         </div>
-        <div class="box" data-aos="flip-down" data-aos-duration="1200" data-aos-delay="400">
-            <img src="images/school.jpg" alt="School">
+        <div class="box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+            <img src="images/school.jpg" alt="School" loading="lazy">
             <h3>School</h3>
             <p>Quality education for the next generation.</p>
         </div>
-        <div class="box" data-aos="zoom-in-up" data-aos-duration="1200" data-aos-delay="500">
-            <img src="images/market.jpg" alt="Market">
+        <div class="box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">
+            <img src="images/market.jpg" alt="Market" loading="lazy">
             <h3>Market</h3>
             <p>Daily essentials just steps away.</p>
         </div>
-        <div class="box" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="600">
-            <img src="images/street lights.jpg" alt="Solar-Powered Street Lights">
+        <div class="box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+            <img src="images/street lights.jpg" alt="Solar-Powered Street Lights" loading="lazy">
             <h3>Solar-Powered Street Lights</h3>
             <p>Sustainability meets convenience.</p>
         </div>
-        <div class="box" data-aos="flip-left" data-aos-duration="1200" data-aos-delay="700">
-            <img src="images/Sewerage system.jpg" alt="Underground Services">
+        <div class="box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="700">
+            <img src="images/Sewerage system.jpg" alt="Underground Services" loading="lazy">
             <h3>Underground Services</h3>
             <p>Reliable power, sewerage & clean surroundings.</p>
         </div>
-        <div class="box" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="800">
-            <img src="images/Boundary.jpg" alt="24/7 Security">
+        <div class="box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800">
+            <img src="images/Boundary.jpg" alt="24/7 Security" loading="lazy">
             <h3>24/7 Security</h3>
             <p>Boundary walls, barbed wires, and CCTV surveillance.</p>
         </div>
@@ -140,20 +176,18 @@
     <div class="footer-container">
         <div class="footer-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
             <h3>About Black OAKS</h3>
-            <a href="#" class="logo"><img src="images/footer-logo.png" alt="Black OAKS Group Logo"></a>
+            <a href="index.html" class="logo"><img src="images/footer-logo.png" alt="Black OAKS Group Logo"></a>
             <p>Black OAKS Group is a trusted real estate developer in Khyber Pakhtunkhwa, delivering premium, sustainable housing projects for modern living.</p>
         </div>
         <div class="footer-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#why-choose-us">Why Choose Us</a></li>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="index.html#services">Services</a></li>
                 <li><a href="#amenities">Amenities</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#recent-notification">Notifications</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </div>
         <div class="footer-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
@@ -221,6 +255,7 @@
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

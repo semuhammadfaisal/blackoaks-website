@@ -23,46 +23,32 @@
 </head>
 <body>
 
-    <!-- header section starts -->
+<!-- header section starts -->
 <header class="header" aria-label="Main Navigation">
     <a href="#" class="logo"><img src="images/logo.png" alt="Black OAKS Group Logo"></a>
 
     <nav class="navbar" aria-label="Primary Navigation">
-        <a href="#home">home</a>
+        <a href="index.html" class="active">home</a>
         <a href="#about">about</a>
         <a href="projects.html">projects</a>
         <a href="#services">services</a>
-        <a href="#amenities">amenities</a>
+        <a href="projects.html#amenities">amenities</a>
         <a href="#contact">contact</a>
     </nav>
 
     <div class="icons">
         <div class="fas fa-search" id="search-btn" aria-label="Open Search" role="button" tabindex="0"></div>
-        <div class="fas fa-user" id="login-btn" aria-label="Open Login Form" role="button" tabindex="0"></div>
-        <div class="fas fa-bars" id="menu-btn" aria-label="Toggle Menu" role="button" tabindex="0"></div>
+        <div class="fas fa-bars" id="menu-btn" aria-label="Toggle Menu" role="button" tabindex="0" aria-expanded="false"></div>
     </div>
 
     <div class="search-form">
         <input type="search" id="search-box" placeholder="search here..." aria-label="Search">
         <label for="search-box" class="fas fa-search"></label>
     </div>
-
-    <form class="login-form">
-        <h3>login now</h3>
-        <input type="email" placeholder="your email" class="box" aria-label="Email">
-        <input type="password" placeholder="your password" class="box" aria-label="Password">
-        <div class="flex">
-            <input type="checkbox" id="remember" aria-label="Remember Me">
-            <label for="remember">remember me</label>
-            <a href="#">forgot password?</a>
-        </div>
-        <input type="submit" value="login now" class="btn">
-        <p>don't have an account? <a href="#">create one</a></p>
-    </form>
 </header>
 <!-- header section ends -->
 
-    <!-- home section starts -->
+<!-- home section starts -->
 <section class="home" id="home" aria-label="Home Section" data-aos="fade-in" data-aos-duration="1200">
     <div class="swiper home-slider">
         <div class="swiper-wrapper">
@@ -95,7 +81,7 @@
 </section>
 <!-- home section ends -->
 
-    <!-- about section starts -->
+<!-- about section starts -->
 <section class="about" id="about" aria-label="About Us Section" data-aos="fade-right" data-aos-duration="1000">
     <h1 class="heading">about us</h1>
 
@@ -300,7 +286,8 @@
     <div class="box-container">
         <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
             <h3>University Villas Notification</h3>
-            <p>Posted: April 15, 2025</p>
+            <p class="issue-date">Issue Date: April 15, 2025</p>
+            <p class="expire-date">Expire Date: April 30, 2025</p>
             <a href="images/University Villa's Notification.pdf" class="btn pdf-link" target="_blank" aria-label="Download Plot Allocation Update PDF">Download PDF</a>
         </div>
     </div>
@@ -327,8 +314,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#why-choose-us">Why Choose Us</a></li>
-                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="projects.html#amenities">Amenities</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#recent-notification">Notifications</a></li>
             </ul>
